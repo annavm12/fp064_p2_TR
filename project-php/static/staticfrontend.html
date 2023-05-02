@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de eventos</title>
+</head>
+<body>
+    <h1>Descripcion de la aplicacion</h1>
+    <h2>Login y register</h2>
+    <p>Cuando se accede a la aplciacion, esta nos redirige directamente a login. En el login encontramos un formulario como este:</p>
+    <img src="img/login.png">
+    <p>Tras introducir un usuario y una contraseña correctas, podemos hacer click en entrar y no redirigira al indice. En el caso de que el usuario 
+        o la contraseña no sean correctas nos mostra un alert indicando que son incorrectas:
+    </p>
+    <img src="img/incorrectlogin.png">
+    <p>En el caso de que falten datos nos mostrara un alert diferente:</p>
+    <img src="img/loginfaltan.png">
+    <p>Si no disponemos de un usuario y contraseña podemos crear uno haciendo click en el boton Registrarse. Esto nos llevara a un formulario donde podremos registrarnos:</p>
+    <img src="img/register.png">
+    <p>En este formulario debemos rellenar todos los campos, sino el usuario no podra crearse. Segun vayamos rellenado campos desaparecera el mensaje que 
+        indica que el campo no puede estar vacio: 
+    </p>
+    <img src="img/registerincompleto.png">
+    <p>En el caso de que introduzcamos un nombre de usuario que ya exista nos redirigira a una vista que nos lo indicara y nos permitira ir al login:</p>
+    <img src="img/usuarioexiste.png">
+    <p>Si el usuario se puede crear con existo nos mostrara una vista distinta y nos permitira ir al login:</p>
+    <img src="img/usuariocreado.png">
+    <p>El nombre de usuario pasara a ser la combinacion del nombre mas el segundo apellido mas el tercer apellido, la contraseña sera la qeu hayamos introducido.</p>
+    <h2>Menu usuario</h2>
+    <P>Ahora podemos ir al login he introducir las credenciales que hayamos introducido en el registro. En funcion del rol que tenga el usuario vermos distintos menus.
+        En el caso de que el usuario tenga el rol usuario veremos un panel con los actos disponibles el cual nos permite filtralos por dia:
+    </P>
+    <img src="img/actosdia.png">
+    <p>Por semana:</p>
+    <img src="img/actossemana.png">
+    <p>O por mes:</p>
+    <img src="img/actosmes.png">
+    <p>En los actos en los que no estemos inscritos, vermos en la columan INSCRITO el boton borrarse, mientras que en los que no estemos inscritos veremos el boton inscribirse.</p>
+    <p>Si hacemos click en el boton Ver evento de la columna evento veremos una descripcion del evento:</p>
+    <img src="img/verevento.png">
+    <p>Esta vista incluye un boton que nos permite volver al listado de eventos.</p>
+    <p>Si hacemos click en el boton borrarse veremos un alert que nos confirma que nos hemos borrado y se recargara la pagina:</p>
+    <img src="img/borrado.png">
+    <p>Si hacemos click en el boton inscribirse veremos un alert que nos indica que nos hemos inscrito en el evento y se recargara la pagina:</p>
+    <img src="img/inscrito.png">
+    <h2>Menu ponente</h2>
+    <h2>Menu administrador</h2>
+</body>
+</html>

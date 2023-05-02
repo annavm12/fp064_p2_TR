@@ -1,0 +1,44 @@
+version: "3.1"
+services:
+    db:
+        image: mysql
+        ports: 
+            - "3306:3306"
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_DATABASE: Calendario
+            MYSQL_PASSWORD: rocket
+            MYSQL_ROOT_PASSWORD: rocket 
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - ./conf:/etc/mysql/conf.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    web_server:
+        image: php:7.4-apache
+        container_name: web_server
+        restart: always
+        ports: 
+         - 8000:80
+        volumes:
+        - C:\Users\Asus\Documents\GitHub\fp064\Producto2-20230425T181209Z-001\Producto2\project-php:/var/www/html
+        networks:
+        - default
+        depends_on: 
+        - db
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8001:80
+        networks: 
+        - default
+        environment:
+            PMA_HOST: db
+            PMA_USER: root
+            PMA_PASSWORD: rocket
+            PMA_ROOT_PASSWORD: rocket 
+volumes:
+    persistent:

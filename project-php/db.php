@@ -8,7 +8,7 @@ $conn = mysqli_connect("localhost","root","","eventos");
 
 if($conn->connect_error)
 {
-  die("Error on conecting with DB");
+die("Error on conecting with DB");
 }
 
 
@@ -20,8 +20,8 @@ function getActs($id_value=NULL)
 	$id = $_SESSION['user-data']['Id_Persona'];
 
 	$query = "SELECT * FROM actos ac
-	          inner join tipo_acto ta on ac.Id_tipo_acto=ta.Id_tipo_acto
-	          LEFT JOIN inscritos ins on ins.id_acto = ac.Id_acto AND ins.Id_persona = $id";
+	        inner join tipo_acto ta on ac.Id_tipo_acto=ta.Id_tipo_acto
+	        LEFT JOIN inscritos ins on ins.id_acto = ac.Id_acto AND ins.Id_persona = $id";
 
 	if(!empty($id_value))
 	{

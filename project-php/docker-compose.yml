@@ -20,9 +20,9 @@ services:
         container_name: web_server
         restart: always
         ports: 
-         - 8000:80
+        - 8000:80
         volumes:
-        - C:\Users\Asus\Documents\GitHub\fp064\Producto2-20230425T181209Z-001\Producto2\project-php:/var/www/html
+        - C:\Users\David\OneDrive\Documentos\GitHub\fp064_p2_TR\project-php:/var/www/html
         networks:
         - default
         depends_on: 

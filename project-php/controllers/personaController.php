@@ -31,6 +31,7 @@ function persistPersona($arg){
     $apellido= $arg->getApellido1();
     $apellido2= $arg->getApellido2();
     //preparamos sql
+    echo "HE LLEGADO";
     $sql='INSERT INTO Personas (Nombre, Apellido1, Apellido2) VALUES (:name,:apellido,:apellido2)';
     //preparamos la consulta
     $sql= $conn->prepare($sql);

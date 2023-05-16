@@ -32,6 +32,7 @@ li a:hover {
 <body>
 
 <?php include "navbar.php" ?>
+<?php include "./views/index.php" ?>
 
 </body>
 </html>

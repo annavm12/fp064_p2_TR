@@ -1,84 +1,9 @@
-<?php include ("./views/header.php"); ?>
-<?php include ("./views/index.php"); ?>
-
-<!-- Menu usuarios -->
-<?php
-if ($_SESSION['rol'] == 'Usuario') {
-    require_once('./controllers/actosController.php');
-?>
-<?php 
-if (isset($_POST["inscribirBorrar"])) {
-    if ($_POST["inscribirBorrar"] == "borrarse") {
-
-            $borrado = deleteInscripcion($_SESSION['persona'], $_POST["id_acto"]);
-            if ($borrado == 1) {
-                echo "<script>alert('Te has borrado correctamente del acto')</script>";
-            }else{
-                echo "<script>alert('Ha habido algun fallo al borrarte del acto')</script>";
-            }
-    }else{
-
-        $insercion = insertInscripcion($_SESSION['persona'], $_POST["id_acto"]);
-        if ($insercion == 1) {
-            echo "<script>alert('Te has inscrito correctamente en el acto')</script>";
-        }else{
-            echo "<script>alert('Ha habido algun fallo al inscribirte en el acto acto')</script>";
-        }
-    }
-}
-
-if (isset($_POST["esPonente"])) {
-    if ($_POST["esPonente"] == "ponente") {
-        
-        $borrado = deletePonente($_SESSION['persona'], $_POST["id_acto"]);
-        if ($borrado == 1) {
-            echo "<script>alert('Te has borrado como ponente correctamente')</script>";
-        }else{
-            echo "<script>alert('Ha habido algun fallo al borrarte como ponente')</script>";
-        }
-    }else{
-        
-        $insercion = insertPonente($_SESSION['persona'], $_POST["id_acto"]);
-        if ($insercion == 1) {
-            echo "<script>alert('Te has inscrito correctamente como ponente')</script>";
-        }else{
-            echo "<script>alert('Ha habido algun fallo al inscribirte como ponente')</script>";
-        }
-    }
-}
-?>
-
-<?php
-    $tipoVistaColorXdia = "btn btn-primary";
-    $tipoVistaColorXsemana = "btn btn-primary";
-    $tipoVistaColorXmes = "btn btn-primary";
-    $_SESSION["tipoVista"] = null;
-    if (!isset($_POST["mostrarVista"])) {
-        $_SESSION["tipoVista"] == null;
-    }else{
-        $_SESSION["tipoVista"]= $_POST["mostrarVista"];
-    }
-    
-    $concat = '';
-    
-    if (!isset($_SESSION["tipoVista"]) or $_SESSION["tipoVista"] == "3") {
-        $data = getAllActosXmes();
-        $tipoVistaColorXmes = "btn btn-success";
-    }else if($_SESSION["tipoVista"] == "2"){
-        $data = getAllActosUltimos7dias();
-        $tipoVistaColorXsemana = "btn btn-success";
-    }else if($_SESSION["tipoVista"] == "1"){
-        $data = getAllActosXdia();
-        $tipoVistaColorXdia = "btn btn-success";
-    }
-    
-    
-?>
-<div align="center">
+<!--<div align="center">-->
+<div>
 	<form action="index.php" method="post">
-      <button type="submit" name="mostrarVista" value="1" class="<?php echo $tipoVistaColorXdia; ?>">Vista por dia</button>
-      <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista ultimos siete dias</button>
-      <button type="submit" name="mostrarVista" value="3" class="<?php echo $tipoVistaColorXmes; ?>">Vista por mes</button>
+        <button type="submit" name="mostrarVista" value="1" class="<?php echo $tipoVistaColorXdia; ?>">Vista por dia</button>
+        <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista ultimos siete dias</button>
+        <button type="submit" name="mostrarVista" value="3" class="<?php echo $tipoVistaColorXmes; ?>">Vista por mes</button>
     </form>
     <br>
 </div>
@@ -211,10 +136,10 @@ if (isset($_POST["esPonente"])) {
 
 <!-- Menu ponentes -->
 <?php
-} else if ($_SESSION['rol'] == 'Ponente') {
+if ($_SESSION['rol'] == 'Ponente') {
     require_once('./controllers/actosController.php');
-?>
-<?php 
+}
+
 if (isset($_POST["inscribirBorrar"])) {
     if ($_POST["inscribirBorrar"] == "borrarse") {
 
@@ -281,7 +206,8 @@ if (isset($_POST["esPonente"])) {
     
     
 ?>
-<div align="center">
+<!--<div align="center">-->
+<div>
 	<form action="index.php" method="post">
       <button type="submit" name="mostrarVista" value="1" class="<?php echo $tipoVistaColorXdia; ?>">Vista por dia</button>
       <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista ultimos siete dias</button>
@@ -360,10 +286,3 @@ if (isset($_POST["esPonente"])) {
         </tbody>
 	</table>
 </div>
-<?php }?>
-
-
-<!-- Menu menu administrador -->
-
-
-<?php include ("./views/footer.php") ?>

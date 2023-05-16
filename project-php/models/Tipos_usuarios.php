@@ -4,7 +4,7 @@ requier_once('../config/conexion.php');
 class Usuario{
     private $id;
     private $descripcion;
- 
+
     function __construct($arg){
         $this->descripcion= $arg;
     }

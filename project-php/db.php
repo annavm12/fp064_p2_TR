@@ -1,9 +1,11 @@
 <?php
 
+include "db.php";
 session_start();
 
 
-$conn = mysqli_connect("localhost","root","","eventos");
+//$conn = mysqli_connect("localhost","root","","eventos");
+$conn = connect();
 
 
 if($conn->connect_error)

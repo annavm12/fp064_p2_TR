@@ -1,10 +1,12 @@
 <?php include ("./views/header.php"); ?>
-<?php include ("./views/index.php"); ?>
+<?php //include ("login.php"); ?>
+<?php //include ("./views/index.php"); ?>
+<?php require_once('./controllers/actosController.php');?>
 
 <!-- Menu usuarios -->
 <?php
-if ($_SESSION['rol'] == 'Usuario') {
-    require_once('./controllers/actosController.php');
+//if ($_SESSION['rol'] == 'Usuario') {
+//    require_once('./controllers/actosController.php');
 ?>
 <?php 
 if (isset($_POST["inscribirBorrar"])) {
@@ -74,7 +76,7 @@ if (isset($_POST["esPonente"])) {
     
     
 ?>
-<div align="center">
+<div>
 	<form action="index.php" method="post">
       <button type="submit" name="mostrarVista" value="1" class="<?php echo $tipoVistaColorXdia; ?>">Vista por dia</button>
       <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista ultimos siete dias</button>
@@ -211,7 +213,7 @@ if (isset($_POST["esPonente"])) {
 
 <!-- Menu ponentes -->
 <?php
-} else if ($_SESSION['rol'] == 'Ponente') {
+if ($_SESSION['rol'] == 'Ponente') {
     require_once('./controllers/actosController.php');
 ?>
 <?php 

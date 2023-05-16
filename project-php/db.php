@@ -1,6 +1,6 @@
 <?php
-
-include "db.php";
+require_once('./config/conexion.php');
+//include "db.php";
 session_start();
 
 

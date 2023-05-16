@@ -21,9 +21,7 @@
     		</tr>
 		</thead>
 		<tbody>
-        <?php
-            
-            
+        <?php    
             
             foreach ($data as $acto) {
                 

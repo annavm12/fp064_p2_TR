@@ -106,11 +106,11 @@ if (isset($_POST["esPonente"])) {
                 
                 if (!getInscritos($_SESSION['persona'], $acto['Id_acto'])) {
                     $nombreBoton = "inscribirse";
-                    $colorBoton = "btn btn-primary";
+                    $colorBoton = "btn btn-success";
                     $valueBoton = "incribir";
                 }else {
                     $nombreBoton = "borrarse";
-                    $colorBoton = "btn btn-warning";
+                    $colorBoton = "btn btn-danger";
                     $valueBoton = "borrarse";
                 }
                 
@@ -313,11 +313,11 @@ if (isset($_POST["esPonente"])) {
                 
                 if (!getInscritos($_SESSION['persona'], $acto['Id_acto'])) {
                     $nombreBoton = "inscribirse";
-                    $colorBoton = "btn btn-primary";
+                    $colorBoton = "btn btn-success";
                     $valueBoton = "incribir";
                 }else {
                     $nombreBoton = "borrarse";
-                    $colorBoton = "btn btn-warning";
+                    $colorBoton = "btn btn-danger";
                     $valueBoton = "borrarse";
                 }
                 

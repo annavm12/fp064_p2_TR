@@ -27,11 +27,11 @@
                 
                 if (!getInscritos($_SESSION['persona'], $acto['Id_acto'])) {
                     $nombreBoton = "inscribirse";
-                    $colorBoton = "btn btn-primary";
+                    $colorBoton = "btn btn-success";
                     $valueBoton = "incribir";
                 }else {
                     $nombreBoton = "borrarse";
-                    $colorBoton = "btn btn-warning";
+                    $colorBoton = "btn btn-danger";
                     $valueBoton = "borrarse";
                 }
                 
@@ -63,10 +63,10 @@
                                     <button type="submit" name="inscribirBorrar" value="'. $valueBoton .'"  class="'. $colorBoton . '">' . $nombreBoton .  '</button>
                                     </form>' .'</td>';
                 $concat .= '<td>' . '<form  action="mostrarEvento.php" method="post">
-                                     <input name="id_acto" type="hidden" value="'.$acto['Id_acto'].'">
-                                     <button type="submit" class="btn btn-primary">Ver evento</button>
-                                     
-                                     </form>' . '</td>';
+                                    <input name="id_acto" type="hidden" value="'.$acto['Id_acto'].'">
+                                    <button type="submit" class="btn btn-primary">Ver evento</button>
+                                    
+                                    </form>' . '</td>';
                 $concat .= '</tr>';
             }
             

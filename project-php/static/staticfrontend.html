@@ -7,45 +7,40 @@
     <title>Gestor de eventos</title>
 </head>
 <body>
-    <h1>Descripcion de la aplicacion</h1>
-    <h2>Login y register</h2>
-    <p>Cuando se accede a la aplciacion, esta nos redirige directamente a login. En el login encontramos un formulario como este:</p>
-    <img src="img/login.png">
-    <p>Tras introducir un usuario y una contraseña correctas, podemos hacer click en entrar y no redirigira al indice. En el caso de que el usuario 
-        o la contraseña no sean correctas nos mostra un alert indicando que son incorrectas:
-    </p>
-    <img src="img/incorrectlogin.png">
-    <p>En el caso de que falten datos nos mostrara un alert diferente:</p>
-    <img src="img/loginfaltan.png">
-    <p>Si no disponemos de un usuario y contraseña podemos crear uno haciendo click en el boton Registrarse. Esto nos llevara a un formulario donde podremos registrarnos:</p>
-    <img src="img/register.png">
-    <p>En este formulario debemos rellenar todos los campos, sino el usuario no podra crearse. Segun vayamos rellenado campos desaparecera el mensaje que 
-        indica que el campo no puede estar vacio: 
-    </p>
-    <img src="img/registerincompleto.png">
-    <p>En el caso de que introduzcamos un nombre de usuario que ya exista nos redirigira a una vista que nos lo indicara y nos permitira ir al login:</p>
-    <img src="img/usuarioexiste.png">
-    <p>Si el usuario se puede crear con existo nos mostrara una vista distinta y nos permitira ir al login:</p>
-    <img src="img/usuariocreado.png">
-    <p>El nombre de usuario pasara a ser la combinacion del nombre mas el segundo apellido mas el tercer apellido, la contraseña sera la qeu hayamos introducido.</p>
+    <h1>Descripción del funcionamiento de la aplicación</h1>
+    <h2>Login y registro</h2>
+    <p>Cuando se accede a la aplciación, nos envia directamente a la pagina del login. Aquí, si tenemos un usuario creado iniciaremos sesión y si no, nos registraremos.:</p>
+    <img src="img/Captura.JPG">
+    <p>Introducimos en este caso todos los datos necesarios para Registrar un nuevo USUARIO:</p>
+    <img src="img/Registro.JPG">
+    <p>En este caso el USUARIO ya esta creado y por lo tanto nos mostrará este mensaje:</p>
+    <img src="img/UsuarioRegistrado.JPG">
+    <p>En caso de que el USUARIO no estuviera creado el mensaje seria el siguiente:</p>
+    <img src="img/UsuarioCreado.JPG">
+    <p>Iniciamos la sesión con nuestro USUARIO:</p>
+    <img src="img/InicioSesion.JPG">
+    
     <h2>Menu usuario</h2>
-    <P>Ahora podemos ir al login he introducir las credenciales que hayamos introducido en el registro. En funcion del rol que tenga el usuario vermos distintos menus.
-        En el caso de que el usuario tenga el rol usuario veremos un panel con los actos disponibles el cual nos permite filtralos por dia:
-    </P>
-    <img src="img/actosdia.png">
-    <p>Por semana:</p>
-    <img src="img/actossemana.png">
-    <p>O por mes:</p>
-    <img src="img/actosmes.png">
-    <p>En los actos en los que no estemos inscritos, vermos en la columan INSCRITO el boton borrarse, mientras que en los que no estemos inscritos veremos el boton inscribirse.</p>
-    <p>Si hacemos click en el boton Ver evento de la columna evento veremos una descripcion del evento:</p>
-    <img src="img/verevento.png">
-    <p>Esta vista incluye un boton que nos permite volver al listado de eventos.</p>
-    <p>Si hacemos click en el boton borrarse veremos un alert que nos confirma que nos hemos borrado y se recargara la pagina:</p>
-    <img src="img/borrado.png">
-    <p>Si hacemos click en el boton inscribirse veremos un alert que nos indica que nos hemos inscrito en el evento y se recargara la pagina:</p>
-    <img src="img/inscrito.png">
-    <h2>Menu ponente</h2>
-    <h2>Menu administrador</h2>
+    <p>Una vez introducidos los datos correctos en el LOGIN, entraremos con nuestro USUARIO a la vista de USUARIO en este caso:</p>
+    <img src="img/VistaPrincipal.JPG">
+    <p>Podemos ver que en la anterior imagen esta seleccionada la opción de "Vista por dia", en este caso seleccionaremos la opción "Vista por semana":</p>
+    <img src="img/VistaporSemana.JPG">
+    <p>Seleccionamos en esta imagen la opción de "Vista por mes":</p>
+    <img src="img/VistaporMes.JPG">
+    <p>Nos quedamos pues, con la "Vista por Mes", donde hay mas cantidad de eventos.</p>
+    <p>En este caso podemos ver que no estamos inscritos en ningún evento. En caso de que nos interese alguno podemos acceder a los detalles del mismo para informarnos haciendo click en "Ver evento":</p>
+    <img src="img/Detalles.JPG">
+    <p>Bien, para continuar, volvemos a la Vista por mes, una vez decidido que nos queremos inscribir en el evento de la "Carla TED" haremos click en el boton "inscribirse":</p>
+    <img src="img/Inscribir.JPG">
+    <p>Una vez hagamos click veremos el siguiente mensaje:</p>
+    <img src="img/TehasInscrito.JPG">
+    <p>Una vez apuntado al evento veremos que el boton cambia de color:</p>
+    <img src="img/Inscrito.JPG">
+    <p>Ahora imaginemos que lo has pensado dos veces, y has decidio que no quieres asistir a este evento</p>
+    <p>Y que has decidido asistir al resto de eventos que se ofrecen.</p>
+    <p>Deberas hacer click en el boton rojo "borrarse" y a su vez hacer click en los dos votones verdes "inscribirse".</p>
+    <p>Como se ve en la imagen a continuación:</p>
+    <img src="img/CambioIdea.JPG">
+
 </body>
 </html>

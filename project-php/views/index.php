@@ -2,7 +2,7 @@
 <div>
 	<form action="index.php" method="post">
         <button type="submit" name="mostrarVista" value="1" class="<?php echo $tipoVistaColorXdia; ?>">Vista por dia</button>
-        <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista ultimos siete dias</button>
+        <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista por semana</button>
         <button type="submit" name="mostrarVista" value="3" class="<?php echo $tipoVistaColorXmes; ?>">Vista por mes</button>
     </form>
     <br>
@@ -208,7 +208,7 @@ if (isset($_POST["esPonente"])) {
 <div>
 	<form action="index.php" method="post">
       <button type="submit" name="mostrarVista" value="1" class="<?php echo $tipoVistaColorXdia; ?>">Vista por dia</button>
-      <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista ultimos siete dias</button>
+      <button type="submit" name="mostrarVista" value="2" class="<?php echo $tipoVistaColorXsemana; ?>">Vista por semana</button>
       <button type="submit" name="mostrarVista" value="3" class="<?php echo $tipoVistaColorXmes; ?>">Vista por mes</button>
     </form>
     <br>

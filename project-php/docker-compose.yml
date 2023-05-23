@@ -18,13 +18,19 @@ services:
         container_name: web_server
         restart: always
         ports: 
+<<<<<<< Updated upstream
         - 8000:80
         volumes:
         - C:\Users\David\OneDrive\Documentos\GitHub\fp064_p2_TR\project-php:/var/www/html
+=======
+            - 80:80
+        volumes:
+            - D:\GitHub\fp064_p2_TR\project-php:/var/www/html
+>>>>>>> Stashed changes
         networks:
-        - default
+            - default
         depends_on: 
-        - db
+            - db
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         links: 
@@ -32,9 +38,9 @@ services:
         ports:
             - 8001:80
         networks: 
-        - default
+            - default
         environment:
-            PMA_HOST: db
+            PMA_HOST: d
             PMA_USER: root
             PMA_PASSWORD: rocket
             PMA_ROOT_PASSWORD: rocket 
